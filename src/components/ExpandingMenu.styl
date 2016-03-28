@@ -1,0 +1,121 @@
+.expanding-menu
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+  margin auto
+  width 70px
+  height 70px
+
+.expanding-menu-item
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+  margin auto
+
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+
+  width 70px
+  height 70px
+  cursor pointer
+
+  &:hover .expanding-menu-item-icon
+    transform scale(1.25, 1.25)
+
+.expanding-menu-item-title
+  opacity 0
+  font-size 16px
+  letter-spacing 0.7px
+  color #000
+  transition opacity 0.1s ease
+
+.expanding-menu-item-icon
+  display flex
+  justify-content center
+  align-items center
+  width 36px
+  height 36px
+
+  margin-top 10px
+  border 2px solid #5B05B1
+  border-radius 100%
+  color #5B05B1
+
+  transition transform 0.2s ease
+
+  .glyphicon
+    top 0
+
+.expanding-menu-item:nth-child(4),
+.expanding-menu-item:nth-child(5),
+.expanding-menu-item:nth-child(6)
+  flex-direction column-reverse
+
+  .expanding-menu-item-icon
+    margin 0 0 10px 0
+
+.expanding-menu-item:nth-child(1)
+  transition transform 0.3s ease
+  &.expanding-menu-item-expanded
+    transition-delay 0.1s
+    transform translate(-100px, -175px)
+    .expanding-menu-item-title
+      transition-delay 0.2s
+
+.expanding-menu-item:nth-child(2)
+  transition transform 0.3s ease 0.1s
+  .expanding-menu-item-title
+    transition-delay 0.1s
+  &.expanding-menu-item-expanded
+    transition-delay 0.2s
+    transform translate(0, -190px)
+    .expanding-menu-item-title
+      transition-delay 0.4s
+
+.expanding-menu-item:nth-child(3)
+  transition transform 0.3s ease 0.2s
+  .expanding-menu-item-title
+    transition-delay 0.2s
+  &.expanding-menu-item-expanded
+    transition-delay 0.3s
+    transform translate(100px, -175px)
+    .expanding-menu-item-title
+      transition-delay 0.5s
+
+.expanding-menu-item:nth-child(4)
+  transition transform 0.3s ease
+  &.expanding-menu-item-expanded
+    transition-delay 0.1s
+    transform translate(-100px, 175px)
+    .expanding-menu-item-title
+      transition-delay 0.2s
+
+.expanding-menu-item:nth-child(5)
+  transition transform 0.3s ease 0.1s
+  .expanding-menu-item-title
+    transition-delay 0.1s
+  &.expanding-menu-item-expanded
+    transition-delay 0.2s
+    transform translate(0, 190px)
+    .expanding-menu-item-title
+      transition-delay 0.4s
+
+.expanding-menu-item:nth-child(6)
+  transition transform 0.3s ease 0.2s
+  .expanding-menu-item-title
+    transition-delay 0.2s
+  &.expanding-menu-item-expanded
+    transition-delay 0.3s
+    transform translate(100px, 175px)
+    .expanding-menu-item-title
+      transition-delay 0.5s
+
+.expanding-menu-item-expanded
+  .expanding-menu-item-title
+    opacity 1

@@ -1,0 +1,77 @@
+filter(value)
+  -webkit-filter value
+  filter value
+
+.central-control-blobs
+  position absolute
+  top 0
+  left 0
+  bottom 0
+  right 0
+
+  width 250px
+  height 250px
+  margin auto
+
+  filter(url("#goo"))
+
+@keyframes main-blob-beat
+  0%
+    transform scale(1, 1)
+  50%
+    transform scale(1.1, 1.1)
+  100%
+    transform scale(1, 1)
+
+.big-central-blob
+  position absolute
+  top 0
+  left 0
+  bottom 0
+  right 0
+
+  width 200px
+  height 200px
+  margin auto
+  background #5B05B1
+  border-radius 100%
+
+  display flex
+  justify-content center
+  align-items center
+
+.big-central-blob-value
+  color #fff
+  font-size 30px
+  line-height 30px
+
+.big-central-blob-value-euro
+  font-size 36px
+
+.big-central-blob-value-cents
+  font-size 20px
+  vertical-align super
+
+.big-central-blob-animate
+  animation main-blob-beat ease 0.3s
+
+.small-movable-blob
+  position absolute
+  top 0
+  left 0
+  bottom 0
+  right 0
+
+  width 60px
+  height 60px
+  margin auto
+  background #5B05B1
+  border-radius 100%
+
+  transform translate(0, 0)
+  transition transform 0.7s ease, opacity 0s ease 0.7s
+  opacity 0
+
+.small-movable-blob-visible
+  opacity 1
+  transition opacity 0s ease

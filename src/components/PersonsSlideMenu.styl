@@ -1,0 +1,125 @@
+.persons-slide-menu
+  position absolute
+  left 0
+  right 0
+
+  height 70px
+  overflow hidden
+
+.persons-slide-menu-top
+  top 0
+
+.persons-slide-menu-bottom
+  bottom 0
+
+.persons-slide-menu-hidden
+  transition height 0s ease 0.4s
+  height 0
+
+.persons-slide-menu-hovered
+  height 50%
+
+.persons-slide-menu-preview
+  position absolute
+  height 70px
+  width 100%
+
+  display flex
+  justify-content center
+  align-items center
+
+  color #5B05B1
+  font-size 30px
+
+.persons-slide-menu-top
+  .persons-slide-menu-preview
+    transition top 0.4s ease
+    top 0
+  .persons-slide-menu-content
+    transition margin-top 0.4s ease
+    margin-top -100%
+    top 0
+  &.persons-slide-menu-hovered,
+  &.persons-slide-menu-hidden
+    .persons-slide-menu-preview
+      top -70px
+  &.persons-slide-menu-hovered
+    .persons-slide-menu-content
+      transition margin-top 0.4s ease 0.2s
+      margin-top 0
+
+.persons-slide-menu-bottom
+  .persons-slide-menu-preview
+    transition bottom 0.4s ease
+    bottom 0
+  .persons-slide-menu-content
+    transition margin-bottom 0.4s ease
+    margin-bottom -100%
+    bottom 0
+  &.persons-slide-menu-hovered,
+  &.persons-slide-menu-hidden
+    .persons-slide-menu-preview
+      bottom -70px
+  &.persons-slide-menu-hovered
+    .persons-slide-menu-content
+      transition margin-bottom 0.4s ease 0.2s
+      margin-bottom 0
+
+.persons-slide-menu-content
+  position absolute
+  width 100%
+
+  display flex
+  justify-content center
+
+.persons-slide-menu-item
+  display flex
+  flex-direction column
+  justify-content space-between
+  align-items center
+
+  width 80px
+  padding 10px 0
+  overflow hidden
+
+
+.persons-slide-menu-item-name
+  display flex
+  justify-content center
+  text-align center
+  font-size 13px
+
+  transition transform 0.2s ease
+
+.persons-slide-menu-item-initials
+  display flex
+  justify-content center
+  align-items center
+
+  width 50px
+  height 50px
+  margin-top 10px
+  border-radius 100%
+  background-color #00A14B
+
+  color #fff
+  font-size 20px
+  text-transform uppercase
+
+  transition transform 0.2s ease
+
+.persons-slide-menu-item.persons-slide-menu-item-hovered
+  .persons-slide-menu-item-name
+    transform translateY(-10px)
+
+  .persons-slide-menu-item-initials
+    transform scale(1.2)
+
+.persons-slide-menu-item:nth-child(2n) .persons-slide-menu-item-initials
+  background-color #fcbc21
+
+.persons-slide-menu-item:nth-child(3n) .persons-slide-menu-item-initials
+  background-color #1eacfc
+
+.persons-slide-menu-item:nth-child(4n) .persons-slide-menu-item-initials
+  background-color #ff89f6
